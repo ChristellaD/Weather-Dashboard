@@ -36,6 +36,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     };
 
+    const clearButton = document.getElementById('clear-button');
+    clearButton.addEventListener('click', clearSearchHistory);
+    function clearSearchHistory() {
+      searchHistory.innerHTML = '';
+      localStorage.removeItem('history');
+    };
+    
+
+
 const APIKey = "60b770fb8a9fd15e8ba4eefb5a95d252";
 
     function citySearch(city) {

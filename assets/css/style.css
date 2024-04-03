@@ -15,12 +15,12 @@ h1, h2, h3 {
     text-align: center;
 }
 
-#search-history {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: fit-content;
-
+#sidebar {
+    width: 20%;
+    background-color: rgb(133, 192, 229);
+    padding: 10px;
+    position: fixed;
+    top: 0;
 }
 
 #forecastbox-container {
@@ -67,9 +67,10 @@ button {
     background-color: rgb(117, 171, 204);
     color: white;
     text-align: center;
-    display: inline-block;
-    font-size: 16px;
-
+    margin: 5px;
+    width: 90%;
+    padding: 10px;
+    border: none;
 }
 
 #search-button {
@@ -83,4 +84,5 @@ button {
 .history-button {
     padding: 5px;
     margin: 5px;
+
 }
