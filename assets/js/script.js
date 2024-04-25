@@ -3,6 +3,8 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     console.log("DOM fully loaded and parsed"); 
 
+    
+
     //search bar event listener
     const searchBar = document.getElementById("search-bar");
     searchBar.addEventListener('submit', async function (event) {
@@ -14,16 +16,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     const searchHistory = document.getElementById('search-history');
-    loadSearchHistory();
+    loadSearchHistory();    
+    
 
     function saveToLocalStorage(city) {
-        let history = JSON.parse(localStorage.getItem('history')) || [];
-        history.push(city);
-        localStorage.setItem('history', JSON.stringify(history));
+        let historyArray = JSON.parse(localStorage.getItem('history')) || [];
+        if (historyArray.indexOf(city) == -1){
+            historyArray.push(city);
+        }
+        var noDupeArray = JSON.stringify(historyArray);
+        window.localStorage.setItem("history", noDupeArray);;
     };  //turns city names into JSON strings to be saved in local storage
     function loadSearchHistory() {
-        let history = JSON.parse(localStorage.getItem('history')) || [];
-        history.forEach(city => {
+        let noDupeArray = JSON.parse(localStorage.getItem('history')) || [];
+        noDupeArray.forEach(city => {
             const historyButton = document.createElement('button');
             historyButton.classList.add('history-button');
             historyButton.textContent = city;

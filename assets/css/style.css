@@ -81,6 +81,10 @@ button {
     font-size: small;
 }
 
+#clear-button {
+    text-decoration: underline;
+}
+
 .history-button {
     padding: 5px;
     margin: 5px;
