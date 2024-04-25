@@ -11,9 +11,14 @@ To view the dashboard:
 3. Open the index. html file in your preferred browser.
 
 ## Usage 
+
+![Home-Page](/assets/images/home.png)
+
 Enter the name of the city for which you want to view the weather forecast in the provided input field.
 
 Click the "Search" button. The dashboard will return the current weather conditions and the weather forecast for the next 5 days. (The displayed temperature is an average of the temperatures throughout the specified day).
+
+![Search-Page](/assets/images/search.png)
 
 Click the "Clear Search History" button to clear the searched cities from your local storage and remove the "history buttons" from the page.
 
